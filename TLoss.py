@@ -19,7 +19,7 @@ for l in range(1, ImgCount + 1):
 
     # unzip image file
     with zipfile.ZipFile("t-less_v2_train_kinect_" + TFileName + ".zip", "r") as zip_ref:
-        zip_ref.extractall()
+        zip_ref.extract(TFileName + "/gt.yml")
 
     # open gt.yml file and save its data as list
     with open(TFileName + "/gt.yml") as f:
