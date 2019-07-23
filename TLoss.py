@@ -33,5 +33,6 @@ for l in range(1, ImgCount + 1):
         for j in ImgData[str(i)]:
             CamMatDict.update({i: np.mat(j["cam_R_m2c"]).reshape(3, 3)})
     FullCamDict.update({l: CamMatDict})
+    # delete unzipped files
     shutil.rmtree(TFileName)
 
